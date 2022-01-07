@@ -1,2 +1,7 @@
 /// <reference path="../typings/globals/jquery/index.d.ts" />
-$("#container").html("This is done jquery intelligence");
+import {login} from './login.js';
+$(document).ready(function(){
+    $(".link").on('click',function(){
+       new login().showRegistrationPage();
+    });
+});
