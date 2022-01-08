@@ -27,15 +27,19 @@ div#container {
 th, td {
     padding: 15px;
     text-align: left;
-  }
-  table {
+}
+table {
     margin: 0px auto;
 }
 
-input {
+input[type=text] {  
+    outline: none;  
     height: 30px;
     padding: 5px;
     width: 100%;
+}
+input:focus {
+    border: 2px solid rgb(221, 119, 221);
 }
 button
 {
