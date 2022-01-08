@@ -41,6 +41,9 @@ input[type=text] {
 input:focus {
     border: 2px solid rgb(221, 119, 221);
 }
+.error{
+    border: 2px solid red;
+}
 button
 {
     width: 100%;

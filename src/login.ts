@@ -4,15 +4,7 @@ export  class login{
     constructor()
     {
         
-    }
-    public loginPage():void{    
-
-          
-          
-        // this.showRegistrationPage();
-        // this.returnUser();
-        
-    }
+    }  
     public ValidateLogin(users:user[]):void{
         if(users.length>0)
         {
@@ -20,7 +12,11 @@ export  class login{
             let password:string=$(".login-form #pass").val();
             let reqUser:user=users.filter((u:user)=>u.name===name&&u.password===password)[0];
             if(reqUser){
+                $("#container .login-form").find('input').removeClass('error');
                 alert("done");
+            }
+            else{
+                $("#container .login-form").find('input').addClass('error');
             }
         }
         else{
@@ -28,11 +24,8 @@ export  class login{
         }
     }
      showRegistrationPage():void{
-        // $("#login-heading").html("Registration");
-        // $("#container .login-form").hide();
-        // console.log(this.add(4,5));
-        // this.returnUser;
-        returnUser();
+        $("#login-heading").html("Registration");
+        $("#container .login-form").hide();    
         
     }
     add(a:number,b:number):number{
@@ -56,8 +49,4 @@ export class user{
       this.password=password;
   } 
   
-}
-function returnUser():void{
-    alert("User");    
-    console.log("User")
 }
