@@ -32,4 +32,5 @@ function browserReload(cb){
     cb();
 }
 
+exports.build=tscompile;
 exports.default=series(tscompile,browserServe,watchOnSave);
