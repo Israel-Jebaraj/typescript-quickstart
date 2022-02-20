@@ -15,6 +15,7 @@ function tscompile(){
 
 function watchOnSave(){  
     watch('**/*.html',browserReload);  
+    watch('**/*.css',browserReload);
     watch('src/**/*.ts',series(tscompile,browserReload));
 }
 
