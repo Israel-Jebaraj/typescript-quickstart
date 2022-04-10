@@ -19,16 +19,7 @@ body{
     border-radius: 7px;
     padding: 15px 25px;
 }
-@media only screen and (min-width: 768px) {
-    .container{
-        width: 60%;
-    }
-}
-@media only screen and (min-width: 1000px) {
-    .container{
-        width: 40%;
-    }
-}
+
 .container #todoForm{
     display: flex;
     justify-content: space-between;
@@ -49,7 +40,7 @@ body{
 }
 .container #todoForm button{
     height: 50px; 
-    width:25% ;  
+    width:45% ;  
    border:none;
    color:white;
    font-size: 1rem;
@@ -94,4 +85,17 @@ body{
 .ToDoList li span{
     color:red;
     cursor: pointer;
+}
+@media only screen and (min-width: 768px) {
+    .container{
+        width: 60%;
+    }    
+}
+@media only screen and (min-width: 1000px) {
+    .container{
+        width: 40%;
+    }
+    .container #todoForm button{
+        width: 25%;
+    }
 }
